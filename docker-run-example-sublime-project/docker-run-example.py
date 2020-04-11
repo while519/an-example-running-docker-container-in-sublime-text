@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import os
+import pathlib
 
 if __name__ == '__main__':
-    print(os.path)
+    print(pathlib.Path().absolute())
