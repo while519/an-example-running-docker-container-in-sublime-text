@@ -1,0 +1,27 @@
+{
+	"build_systems":
+	[
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Python in Docker Contatiner",
+			"selector": "source.python",
+			"windows":
+			{
+				"cmd": "docker run --rm -v ${folder}:/root/my-project while725/docker-run-example-sublime-project python $file $folder"
+			},
+			"working_dir": "$folder"
+		},
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Anaconda Python Builder",
+			"selector": "source.python",
+			"shell_cmd": "\"python\" -u \"$file\""
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "docker-run-example-sublime-project"
+		}
+	]
+}
